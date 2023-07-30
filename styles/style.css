@@ -1,0 +1,176 @@
+/*Here is general style for all pages*/
+
+
+section img {border-radius: 15px;}
+a {color: #2e1503;}
+a:hover {
+    color: #ffb300;
+}
+
+.smudge{    /*For page names,except Cake pages*/
+    text-align: left;
+    position: relative;
+    top: -20px;
+    right: 30px;
+}
+.backgrnd {
+    background-color: white;
+    border-radius: 25px;
+    text-align: center;
+    
+    }
+button:hover {
+    filter: drop-shadow(0px 0px 10px #ffb300);}
+body {
+    width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "DK Buttered Toast","Pangolin", Arial;
+    font-size: 20px;
+    background-color: #f8f6f4;
+    color: #2e1503;
+}
+body h1{
+    font-family: "Anke Print","Gloria Hallelujah", Arial;
+}
+.imgSize img{width: 320px;}
+.imgPadding{padding: 33px 3px 14px 3px;}
+
+
+@media screen and (min-width: 700px) {
+    /*---------Grids------------------------------*/
+    .grid4vs3{
+        display: grid;        
+        grid-template-columns: 4fr 3fr;
+        align-items: center;
+        gap: 30px;
+        
+    }
+    .grid3vs4{
+        display: grid;        
+        grid-template-columns: 3fr 4fr;
+        align-items: center;
+        gap: 30px;
+        
+    }
+    /*---------------------------------------------*/
+    .allUnderHeader{position:absolute;top: 215px;} /* I made this code because loading menu takes time and I need to stabilize everything under my header, otherwise it is "jumpimn" each time I open a page*/
+
+} 
+
+@media screen and (min-width: 500px) {
+    .FormWidth{width: 400px;}
+    .inpWidth1{width: 180;}
+    .inpWidth2{width: 190;}
+    input{width: 250px;}
+    
+}
+
+
+/*Styling horizontal lines for header and footer, etc.*/
+.hLine {
+    display: block;
+    border-top: solid rgb(181, 191, 190);
+    opacity: 50%;
+    width: 1360px;
+    position: absolute;
+    margin-left: -260px;
+    z-index: -3;
+}
+
+/*-----------------------*/
+
+@media screen and (min-width:700px) and (max-width:839px){
+    body{ width:700px}
+    .imgSize img{width: 250px;}
+    .hLine{width:830px; margin-left: -65px;}
+    
+}
+@media screen and (max-width:699px) {
+    body{
+        width: auto;
+        text-align: center;
+        margin-left: 3%;
+        margin-right: 3%;
+ 
+    }
+    .imgSize img{width: 100%;}
+    .hLine {display: none;}
+    .smudge{text-align: left;}
+    .allUnderHeader{padding-top: 50px;}
+}
+
+/*------For forms-----------------*/
+.smallBtn {
+    font-family: "DK Buttered Toast","Pangolin",  Arial;
+    font-size: 20px;
+    background-color: #2e1503;
+    border: solid 2px #2e1503;
+    border-radius: 5px;
+    color: #ffb300 ;
+}
+input {
+    font-family: "DK Buttered Toast","Pangolin",  Arial;
+    font-size: 20px;
+    background-color: #f8f6f4;
+    border: solid 1px #2e1503;
+    border-radius: 5px;
+    color: #2e1503;
+}
+
+textarea{
+    font-family: "DK Buttered Toast","Pangolin",  Arial;
+    font-size: 20px;
+    background-color: #f8f6f4;
+    border: solid 1px #2e1503;
+    border-radius: 5px;
+    color: #2e1503;
+}
+
+ @media screen and (max-width:300px) {
+    input{width: 100%;
+    padding-left: 0px;}
+    select{width: 100%;}
+    
+}
+
+
+.beePlace{position: absolute; right: 100px; top: 175px;}
+
+.MsgPlace{position: absolute; right: 170px; top: 165px;
+    border-radius: 25px; background-color: rgb(255, 230, 171,0.5) ;}
+    
+@media screen and (max-width:699px) {
+        .beePlace{display: none;}
+        /*.beePlace{ position: relative; top: -10px;left: 350px; }*/
+        .MsgPlace{ position: relative; top: -100px; left:0px;padding: 0px auto 0px auto;}
+    }
+
+.hideForm {
+        display: none;
+    }    
+.hideForm.show4 {
+        display: block;
+    }
+select{
+        font-family: "DK Buttered Toast","Pangolin",  Arial;
+         font-size: 20px;
+        background-color: #f8f6f4;
+        color: #2e1503;
+        border: solid 1px #2e1503;
+        border-radius: 5px;
+    }
+
+.hideMiniCakes {
+        display: none;
+    }    
+.hideMiniCakes.show5 {
+        display: block;
+    }    
+.showOtherCakes {
+        display: block;
+    }    
+.showOtherCakes.hide {
+        display: none;
+    }
+   

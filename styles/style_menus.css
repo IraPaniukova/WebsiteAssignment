@@ -1,0 +1,121 @@
+/*In this file, everything related to menu styles*/
+
+/*To hide DDmenu*/
+.hideDDmenu {
+    display: none;
+}
+/*To display DDmenu*/
+.hideDDmenu.show3 {
+    display: block;
+    position: relative;
+    top: 10px;
+    right: 20px;
+}
+
+/* For Cakes dropdown menu*/
+.hideCakes {
+    display: none;
+}
+
+.hideCakes.show {
+    display: block;
+    position: absolute; 
+    left: 29%;
+    top: 160px; 
+    z-index: 1;
+}
+.styleCakesMenu{
+    padding: 3px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+/* To display Cakes dropdown menu using js code from js_code.js  for main menu*/
+.hideCakes.show2 {
+    display: block;
+}
+
+/*---------------------------------------------------------------------------*/
+
+/*hide main menu for small screens*/
+@media screen and (max-width:699px) {
+    #hideMainMenu{
+        display: none !important;
+    }
+}
+
+/*hide dropdown menu for big screens*/
+@media screen and (min-width:700px) {
+    #hideDropDownMenu{
+        display: none !important;
+    }
+}
+
+/*---------------------------------------------------------------------------*/
+
+/*to remove default button styling*/
+#removeButtonStyle {
+    border: none;
+    background: transparent;
+    font-family: "DK Buttered Toast","Pangolin", Arial;
+    text-transform: uppercase;
+    color: rgb(44, 18, 28);
+    font-size: 16px;
+    padding: 0px;
+}
+
+/*---------------------------------------------------------------------------*/
+
+/* Style menu*/
+    #mainMenu {
+        margin-top: 15px;
+        text-align: center;
+        padding-right: 3.7%; /* Because the menu made from list it is the way to center it*/
+    }
+    #mainMenu li {
+        display: inline;
+        padding: 3px;
+        vertical-align: middle;
+    }
+    #DropDownMenu li{
+        list-style-type: none;
+        margin:0px;
+        padding: 0px
+    }
+   
+    #mainMenu li a, #DropDownMenu li a {
+        font-family: "DK Buttered Toast","Pangolin", Arial;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: rgb(44, 18, 28);
+        text-decoration: none; /*removes underlines from links*/ 
+        
+    }
+    #mainMenu li a:hover {
+        color: #ffb300;
+        filter: drop-shadow(0px 0px 10px #ffb300);
+    }
+    
+    #DropDownMenu li a:hover{
+        color: #ffb300;
+    }
+
+    @media screen and (max-width: 500px) {
+        #mainMenu li a, #DropDownMenu li a {
+            font-size: 10vm;
+        }
+        #removeButtonStyle {
+           
+            font-size: 10vm;
+            
+        }
+    }
+
+    
+
+
+
+
+        
+        

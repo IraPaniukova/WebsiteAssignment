@@ -1,0 +1,47 @@
+/*---For FAQ page----*/
+
+.LeftBubble{
+    border-radius: 120px 120px 120px 50px;
+    padding: 20px 40px 20px 40px;
+    margin-right: 100px;
+}
+.RightBubble{
+    border-radius: 120px 120px 50px 120px;
+    padding: 20px 40px 20px 40px;
+    margin-left: 100px;
+    text-align: right;
+}
+
+@media screen and (max-width: 420px) {
+    .LeftBubble{
+        margin-right: 0px;
+    }
+    .RightBubble{
+        margin-left: 0px;
+    }
+}
+
+.yellowish {
+    background-color: rgb(255, 230, 171,0.5) ;     /*#ffe6ab, opacity 50%*/
+ }
+ .pinkish {
+    background-color: rgb(255, 201, 221,0.5) ;     /*#ffc9dd, opacity 50%*/
+ }
+ .blueish {
+    background-color: rgb(186, 234, 240,0.5) ;     /*#baeaf0, opacity 50%*/
+ }
+
+ .dashLine {
+    display: block;
+    border-top: dashed 5px #ffe6ab;
+    opacity: 50%;
+    width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*-----------------------*/
+
+@media screen and (min-width:700px) and (max-width:839px){
+    
+    .dashLine {width: 700px;}
+}

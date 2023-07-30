@@ -1,0 +1,15 @@
+/*---For cake pages----*/
+
+.textPadding {padding: 83px 0px 82px 0px; }
+
+
+@media screen  and (max-width:839px){
+    .textPadding{padding: 48px 5px 47px 5px; }
+}
+
+.smudgeCake{    /*For page names for Cake pages*/
+    text-align: left;
+    position: relative;
+    top: -22px;
+    left: 10px;
+}

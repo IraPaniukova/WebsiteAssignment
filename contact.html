@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact us</title>
+    <!--------- Google fonts  ------------------>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pangolin">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria%20Hallelujah">
+    <!------------------------------------------------------------------>
+
+   <script src="javascript\js_code.js"></script>
+   <script src="javascript\js_validate.js"></script>
+   <script src="javascript\js_calculate.js"></script>
+   <link rel="stylesheet" href="styles/style_menus.css">
+   <link rel="stylesheet" href="styles/style.css">
+   <link rel="stylesheet" href="styles/style_footer.css">
+   <link rel="stylesheet" href="styles/style_bee.css">
+</head>
+
+<body>
+   <!--Header for screen size 600pxand more---------------->
+   <header id="hideMainMenu">
+      <div id="menu"></div>
+
+   </header>
+   <!--Header for screen size less than 600p--------------->
+   <header id="hideDropDownMenu">
+      <img src="images\img\logo.png" alt="Logo" width="200px">
+      <div id="DDmenu"></div>
+   </header>
+   <div class="allUnderHeader">
+      <!--Main part--------------->
+      <section>
+         <div class="backgrnd" style="padding: 0px 40px 40px 40px;">
+            <div class="smudge"><img src="images\img_contact\SmudgeContact.png" alt="About us" height="50px"></div>
+            <!--A customer choosing to ask a question or to make an order-->
+            <label for="chooseForm">Please, choose what would like to do:</label> <br>
+            <select name="chooseForm" id="chooseForm" class="FormWidth">
+               <option value="empty"></option>
+               <option id="ask" value="AskUs">Ask us a question</option>
+               <option id="make" value="MakeOrder">Make an order</option>
+            </select>
+         </div>
+         <!--If customer chose the Form to submit a question--------------->
+         <br>
+         <div class="hideForm" id="Choice1">
+            <div id="form_askUs"></div>
+            <!--Animated bee container -->
+            <div class="beePlace">
+               <div class="bee-container">
+                  <div class="wing-right"><img src="images\img\rightwing.png" height="50px" alt=""></div>
+                  <div class="wing-left"><img src="images\img\leftwing.png" height="50px" alt=""></div>
+                  <div style="position: absolute; left: -13px;top: -37px;"><img src="images\img\bee.png" width="45px"
+                        alt=""></div>
+               </div>
+               <!--The form to ask a question -->
+            </div>
+            <div id="Msg" class="MsgPlace">
+            </div>
+         </div>
+         <!-------------------------->
+         <!--If customer chose the Form to order--------------->
+         <div class="hideForm" id="Choice2">
+
+            <form onsubmit="return validateOrder()" class="backgrnd" style="padding: 20px 40px 40px 40px;">
+                             
+               <label for="category">Cake category&nbsp;&nbsp;</label>
+               <select name="category" id="category" class="inpWidth2">
+                  <option value="Bday">Birthday cakes</option>
+                  <option value="Wed">Wedding cakes</option>
+                  <option value="Child">Children cakes</option>
+                  <option value="Mini">Mini cakes</option>
+               </select> <br><br>
+               <!--If a customer will choose mini cake the next div will be hidden-->
+               <div class="showOtherCakes" id="otherCakes">
+                  <label for="tier" >Number of tiers (Up to 3)&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                  <input onchange="Calculate()" type="number" min="1" id="tier" name="tier" style="width: 80px;text-align: center;"> <br><br>
+                  <label for="layer">Number of layers per tier&nbsp;&nbsp;&nbsp;</label>
+                  <input onchange="Calculate()" type="number" min="1" id="layer" name="layer" style="width: 80px;text-align: center;"> <br><br>
+
+                  <label for="cakeTaste">Cake taste&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                  <select onchange="Calculate()" name="cakeTaste" id="cakeTaste" class="inpWidth2;">
+                     <option value="chocolate">Chocolate</option>
+                     <option value="vanilla">Vanilla</option>
+                     <option value="redVelv">Red velvet</option>
+                     <option value="citrus">Citrus</option>
+                  </select> <br><br>
+
+                  <label for="filling">Cake filling&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                  <select onchange="Calculate()" name="filling" id="filling" class="inpWidth2">
+                     <option value="brown">Chocolate cream</option>
+                     <option value="white">White cream</option>
+                     <option value="pink">Pink cream</option>
+                     <option value="yellow">Yellow cream</option>
+                     <option value="blue">Blue cream</option>
+                     <option value="jam">Jam</option>
+                  </select> <br><br>
+
+                  <label for="icing">Fondant icing&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                  <select  onchange="Calculate()"  id="icing" name="icing" class="inpWidth2">
+                     <option value="none">None</option>
+                     <option value="wh">White</option>
+                     <option value="pi">Pink </option>
+                     <option value="yel">Yellow </option>
+                     <option value="blu">Blue </option>
+                     <option value="bla">Black</option>
+                  </select> <br><br>
+
+                  <label for="fig">Number of cake figurines&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                  <input  onchange="Calculate()" type="number" min="0" id="fig" name="figurine" style="width: 80px;text-align: center;"> <br><br>
+
+                  <label for="berry">Fresh berries&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                  <select  onchange="Calculate()"  id="berry" name="berry" class="inpWidth2">
+                     <option value="none">None</option>
+                     <option value="blueberry">Blueberries</option>
+                     <option value="raspberry">Rasspberries </option>
+                     <option value="srawberry">Srawberries </option>
+                     <option value="cherry">Cherries </option>
+                     <option value="mix">Mix</option>
+                  </select> <br><br>
+                    <!--Contact info of a client--> 
+                  <label for="day"> This order is for </label>
+                  <input type="date" id="day" name="day" class="inpWidth1"><br><br>
+                  <label for="usrName">Name&nbsp;&nbsp;&nbsp;</label>
+                  <input type="text" id="usrName" name="usrName"> <br><br>
+                  <label for="email">E-mail&nbsp;</label>
+                  <input type="email" id="email" name="email"> <br><br>
+                  <label for="phone">Phone&nbsp;&nbsp;&nbsp;</label>
+                  <input type="text" id="phone" name="phone"> <br><br>
+
+                  
+                  <div id="result" ></div>
+                       
+                 <p>The final price needs to be specified</p> 
+                  <br>
+                  <textarea name="comments" id="comments" cols="30" rows="3" style="max-width:100%" >Additional comments</textarea> <br><br>
+                  <button type="submit" id="sumbitOther" name="submitOther" value="submitOther" class="smallBtn">Send the order</button>
+                  <button type="reset" id="reset" class="smallBtn">Clear </button>  
+               </div>  <!--not mini, but other cakes  div ends here-->
+
+               <!--If a customer will choose mini cake, the next div will be shown-->
+
+               <div class="hideMiniCakes" id="miniCakes">
+                  
+                  <div>Please choose how many sets you'd like to order:</div> <br>
+                  <table style="margin-left:auto; margin-right:auto;">
+                     <tr>
+                        <td>
+                           <label for="mousse">White Mousse Mini Cake</label>
+                        </td>      
+                        <td>
+                           <input onchange="CalculateMini()" type="number"  min="0" id="mousse" name="mousse"  style="width: 50px; text-align: center;"> 
+                        </td>
+                        <td>
+                           sets
+                        </td>                        
+                     </tr>
+                     <tr>
+                        <td>
+                           <label for="pistachio">Pistachio Mini Cake</label>
+                        </td>      
+                        <td>
+                           <input onchange="CalculateMini()" type="number" min="0" id="pistachio" name="pistachio"  style="width: 50px; text-align: center;"> 
+                        </td>
+                        <td>
+                           sets
+                        </td>                        
+                     </tr>
+                     <tr>
+                        <td>
+                           <label for="blberry">Blueberry Mini Cake</label>
+                        </td>      
+                        <td>
+                           <input onchange="CalculateMini()" type="number"  min="0" id="blberry" name="blberry"  style="width: 50px; text-align: center;"> 
+                        </td>
+                        <td>
+                           sets
+                        </td>                        
+                     </tr>
+                     <tr>
+                        <td>
+                           <label for="shrt">Shortcrust Mini Cake</label>                           
+                        </td>      
+                        <td>
+                           <input  onchange="CalculateMini()" type="number" min="0" id="shrt" name="shrt"  style="width: 50px; text-align: center;"> 
+                        </td>
+                        <td>
+                           sets
+                        </td>                        
+                     </tr>
+                  </table>        
+                  <br>           
+                  <!--Contact info of a client (form for mini cakes)--> 
+                  <label for="dayM"> This order is for </label>
+                  <input type="date"  id="dayM" name="dayM" class="inpWidth1"><br><br>
+                  <label for="usrNameM">Name&nbsp;&nbsp;&nbsp;</label>
+                  <input type="text" id="usrNameM" name="usrNameM"> <br><br>
+                  <label for="email">E-mail&nbsp;</label>
+                  <input type="email" id="emailM" name="emailM"> <br><br>
+                  <label for="phone">Phone&nbsp;&nbsp;&nbsp;</label>
+                  <input type="text" id="phoneM" name="phoneM"> <br><br>
+                                    
+                  <div id="resultMini"></div> <br> 
+                  <textarea name="comments" id="comments" cols="30" rows="3" style="max-width:100%" >Additional comments</textarea> <br><br>
+                  <button type="submit" id="submitMini" name="submitMini" value="submitMini" class="smallBtn">Send the order</button>
+                  <button type="reset" id="reset" class="smallBtn">Clear </button>    
+                               
+               </div>   <!--mini cakes div ends here-->
+
+               
+               
+            </form>
+            
+
+         </div>
+
+         <!-------------------------->
+
+
+         <br>
+
+         <p style="text-align: center;">
+            Also, you can contact us by e-mail or phones:</p>
+      </section>
+
+
+      <!--Footer---------------------------------------------->
+      <footer>
+         <div id="footer"></div>
+      </footer>
+
+   </div>
+</body>
+
+</html>

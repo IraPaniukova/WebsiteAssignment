@@ -1,0 +1,35 @@
+/*Here is footer styling*/
+
+#socialMedia{grid-area: sm;}
+#c1{grid-area: c1;}
+#c2{grid-area: c2;}
+#c3{grid-area: c3;}
+#c4{grid-area: c4;}	
+@media screen and (min-width: 700px) {
+    .gridStyle {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 10px 0px 0px 0px;
+        gap: 50px;
+        grid-template-areas:
+            "c1 c2 c3 c4"
+            "sm sm sm sm"
+        
+    }
+    .cellStyle {
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+}
+.cellStyle li{
+    list-style-type: none;
+}
+.cellStyle li a{
+    text-decoration: none;
+    color: #2e1503;
+}
+.cellStyle li a:hover{
+    color: #ffb300;
+
+}

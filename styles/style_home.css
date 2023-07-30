@@ -1,0 +1,40 @@
+/*--Home page------------------------------------*/
+
+.homeButton {
+    border: none;
+    width: 424px;
+    height: 70px;
+    border-radius: 10px;
+    font-family: "Anke Print","Gloria Hallelujah", Arial;
+    font-size: 30px;
+    margin-top: 11px;
+}
+.chokTop img{width: 436px;}
+.chokTop{position: relative; top: 30px;}
+
+#Btnarea{padding: 0px 3px 22px 3px;} /*-adjusting paddings on the left of the grid to be similar to the right side-*/
+ 
+@media screen and (min-width:700px) and (max-width:839px){
+        .homeButton {
+        width: 330px;
+        height: 55px;        
+        margin-top: 7px;
+        }
+        .chokTop img{width: 340px;}
+        .chokTop{position: relative; top: 20px}
+        #Btnarea{
+            padding: 10px 3px 22px 3px;
+        }
+}
+@media screen and (max-width:460px){
+    .homeButton {
+    width: 90%;
+    height: 55px;        
+    margin-top: 7px;
+    }
+    .chokTop img{width: 92%;}
+    .chokTop{position: relative; top: 20px}
+    #Btnarea{
+        padding: 10px 3px 22px 3px;
+    }
+}
