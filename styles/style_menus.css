@@ -59,17 +59,17 @@
     border: none;
     background: transparent;
     font-family: "DK Buttered Toast","Pangolin", Arial;
-/*    text-transform: uppercase;*/
+    /*    text-transform: uppercase;*/
     color: rgb(44, 18, 28);
     font-size: 16px;
-    padding: 0px;
-   all: unset; /* Remove all default styling */
+    all: unset; /* Remove all default styling */
     box-sizing: border-box; /* Ensure consistent box sizing */
     font: inherit; /* Inherit font settings from parent */
     color: inherit; /* Inherit text color from parent */
     background: transparent; /* Remove background */
     border: none; /* Remove borders */
     margin: 0; /* Remove margins */
+    padding: 0px;
     cursor: pointer; /* Make it look clickable */
 }
 
