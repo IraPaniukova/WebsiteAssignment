@@ -11,6 +11,11 @@
     top: 10px;
     right: 20px;
 }
+@media (max-width: 600px) {
+    .hideDDmenu.show3 {
+        right: 0;
+    }
+}
 
 /* For Cakes dropdown menu*/
 .hideCakes {
