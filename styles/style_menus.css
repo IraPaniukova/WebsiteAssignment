@@ -24,6 +24,7 @@
 /*    left: 29%;*/
     top: 160px; 
     z-index: 1;
+    transform: none;
 }
 
 @media (min-width: 601px) {
