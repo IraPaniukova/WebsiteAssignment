@@ -70,6 +70,7 @@
     border: none; /* Remove borders */
     margin: 0; /* Remove margins */
     padding: 0px;
+    text-align: center; 
     cursor: pointer; /* Make it look clickable */
 }
 
