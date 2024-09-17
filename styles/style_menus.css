@@ -5,13 +5,13 @@
     display: none;
 }
 /*To display DDmenu*/
-.hideDDmenu.show3 {
-    display: block;
-    position: relative;
-    margin: 0;
-/*    top: 10px;
-    right: 20px;*/
-}
+    .hideDDmenu.show3 {
+        display: block;
+        position: relative;
+        margin-left: 0 !important;
+        top: 10px;
+/*        right: 20px;*/
+    }
 
 
 /* For Cakes dropdown menu*/
