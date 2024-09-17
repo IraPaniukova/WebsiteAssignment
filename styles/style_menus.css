@@ -30,6 +30,7 @@
     .hideCakes.show {
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Adjust position to truly center */
+        padding-inline: 0;
     }
 }
 
